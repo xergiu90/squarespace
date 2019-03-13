@@ -45,41 +45,97 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         #presentation {
             width:50%;
         }
 
+        .presentation:not(.active) {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .active {
+            opacity: 1;
+            left: 0;
+        }
+
+        .disabled {
+            opacity: 0.2;
+        }
+
         .fade {
-            -webkit-animation-name: fade 5s;
-            animation-name: fade 5s;
-            -moz-animation: fade 5s;
-            -o-animation: fade 5s;
+            -webkit-animation: fade 1s;
+            animation: fade 1s;
+            -moz-animation: fade 1s;
+            -o-animation: fade 1s;
+            position: absolute;
+
         }
 
         @-webkit-keyframes fade {
-            0% {opacity: 0.2}
-            50% {opacity: 1}
-            100% {opacity:0.2}
+            0% {opacity: 1;
+                left: 20%;}
+            100% {opacity: 0;
+                left: 70%;}
         }
 
         @-moz-keyframes fade{
-            0% {opacity: 0.2}
-            50% {opacity: 1}
-            100% {opacity:0}
+            0% {opacity: 1;
+                left: 20%;}
+            100% {opacity: 0;
+                left: 70%;}
         }
 
         @keyframes fade {
-            0% {opacity: 0.2}
-            50% {opacity: 1}
-            100%{opacity: 0.2}
+            0% {opacity: 1;
+                left: 20%;}
+            100%{opacity: 0;
+                left: 70%;}
         }
         @-o-keyframes fade {
-            0% {opacity: 0.2}
-            50% {opacity: 1}
-            100%{opacity: 0.2}
+            0% {opacity: 1;
+                left: 20%;}
+            100%{opacity: 0;
+                left: 70%;}
+        }
 
+        .fade-right {
+            -webkit-animation: fade-right 1s;
+            animation: fade-right 1s;
+            -moz-animation: fade-right 1s;
+            -o-animation: fade-right 1s;
+            position: absolute;
+
+        }
+
+        @-webkit-keyframes fade-right {
+            0% {opacity: 1;
+                left: 20%;}
+            100% {opacity: 0;
+                left: -70%;}
+        }
+
+        @-moz-keyframes fade-right{
+            0% {opacity: 1;
+                left: 20%;}
+            100% {opacity: 0;
+                left: -70%;}
+        }
+
+        @keyframes fade-right {
+            0% {opacity: 1;
+                left: 20%;}
+            100%{opacity: 0;
+                left: -70%;}
+        }
+        @-o-keyframes fade-right {
+            0% {opacity: 1;
+                left: 20%;}
+            100%{opacity: 0;
+                left: -70%;}
         }
 
 
@@ -89,25 +145,27 @@
 <body>
 <div class="wrapper">
     <div class="carousel">
-        <img class="arrow left" src="./images/arrow.svg"/>
-        <img class="arrow top disabled" src="./images/arrow.svg"/>
-        <img class="arrow right" src="./images/arrow.svg"/>
-        <img class="arrow bottom" src="./images/arrow.svg"/>
-        <div class="content">
+        <div class="content" id="content">
 
-            <img class="presentation fade" src="1-2.gif">
-            <img class="presentation fade" src="./images/1-3.gif">
         </div>
+        <img class="arrow left" id="left" src="./images/arrow.svg"/>
+        <img class="arrow top disabled" id="top" src="./images/arrow.svg"/>
+        <img class="arrow right" id="right" src="./images/arrow.svg"/>
+        <img class="arrow bottom" id="bottom" src="./images/arrow.svg"/>
     </div>
 </div>
 </body>
 <script>
-    let position= [1,1];
+    let position= [[1,2,3],[1,2,3],[1,2]];
+    let shirts= 1;
+    let pants= 1;
+    let toggleClothes= true;
     let arrowClick= document.querySelectorAll(".arrow");
-    let image= document.getElementById("presentation");
-    let imageGroup= document.getElementsByClassName("content");
+    let arrowUp= document.getElementById("top");
+    let arrowDown= document.getElementById("bottom");
+    let imageGroup= document.getElementById("content");
 
-    imageGroup.innerHTML("<img class='presentation fade' src='./images/"+ position +"'.gif/>");
+    createSlider();
 
     arrowClick.forEach(function(element) {
         element.addEventListener("click", function() {
@@ -117,18 +175,113 @@
 
     function clickArrow(arrow) {
         if(arrow.classList.contains("right")) {
-            position[1]= position[0]==3? position[1]==3? 1 : 2 : position[1]++;
+            let next= document.getElementsByClassName("active")[0].nextSibling;
+            let active= document.getElementsByClassName("active")[0];
+            let first= document.getElementById("content").firstElementChild;
+            if(toggleClothes) {
+                if(!next) {
+                    shirts=1;
+                    first.classList.remove('fade');
+                    active.classList.remove('active');
+                    active.classList.add('fade-right');
+                    first.classList.add('active');
+                    first.classList.remove('fade-right');
+                } else {
+                    next.classList.remove('fade');
+                    active.classList.remove('active');
+                    active.classList.add('fade-right');
+                    next.classList.add('active');
+                    next.classList.remove('fade-right');
+                    shirts++;
+                }
+            } else {
+                if(!next) {
+                    pants=1;
+                    first.classList.remove('fade');
+                    active.classList.remove('active');
+                    active.classList.add('fade-right');
+                    first.classList.add('active');
+                    first.classList.remove('fade-right');
+                } else {
+                    next.classList.remove('fade');
+                    active.classList.remove('active');
+                    active.classList.add('fade-right');
+                    next.classList.add('active');
+                    next.classList.remove('fade-right');
+                    pants++;
+                }
+            }
+
         } else if(arrow.classList.contains("left")) {
-            position[1]= position[0]==3? position[1]==1? 2 : 1: position[1]--;
+            let prev= document.getElementsByClassName("active")[0].previousSibling;
+            let active= document.getElementsByClassName("active")[0];
+            let last= document.getElementById("content").lastElementChild;
+
+            if(toggleClothes) {
+                if(!prev) {
+                    shirts= pants!==3?3:2;
+                    last.classList.remove('fade-right');
+                    active.classList.remove('active');
+                    active.classList.add('fade');
+                    last.classList.add('active');
+                    last.classList.remove('fade');
+                } else {
+                    prev.classList.remove('fade-right');
+                    active.classList.remove('active');
+                    active.classList.add('fade');
+                    prev.classList.add('active');
+                    prev.classList.remove('fade');
+                    shirts--;
+                }
+            } else {
+                if(!prev) {
+                    pants= shirts!==3?3:2;
+                    last.classList.remove('fade-right');
+                    active.classList.remove('active');
+                    active.classList.add('fade');
+                    last.classList.add('active');
+                    last.classList.remove('fade');
+                } else {
+                    prev.classList.remove('fade-right');
+                    active.classList.remove('active');
+                    active.classList.add('fade');
+                    prev.classList.add('active');
+                    prev.classList.remove('fade');
+                    pants--;
+                }
+            }
+
         } else if(arrow.classList.contains("top")) {
-            position[0]= position[0]==1? 3: position[0]--;
+            toggleClothes= true;
+            createSlider(false);
+            arrowUp.classList.add("disabled");
+            arrowDown.classList.remove("disabled");
         } else {
-            position[0]= position[0]==3? 1: position[0]++;
+            toggleClothes= false;
+            createSlider(true);
+            arrowUp.classList.remove("disabled");
+            arrowDown.classList.add("disabled");
         }
 
-        console.log(arrow)
+    }
 
-        arrow.src="./images/"+ position[0] + "-"+ position[1] +".gif";
+    function createSlider(toggleView=false) {
+        imageGroup.innerHTML="";
+        if(!toggleView) {
+            for(let i=1; i<=position[pants-1].length; i++) {
+                let fade= i===shirts?'active':'';
+                if(position[pants-1][i-1]){
+                    imageGroup.innerHTML+= "<img class='presentation "+ fade + "' src='./images/"+ position[pants-1][i-1] + '-' + pants +".gif'/>";
+                }
+            }
+        } else {
+            for(let i=1; i<=position[shirts-1].length; i++) {
+                let fade= i===pants?'active':'';
+                imageGroup.innerHTML+= "<img class='presentation "+ fade + "' src='./images/"+ shirts + '-' + position[shirts-1][i-1] +".gif'/>";
+            }
+        }
+
+
     }
 </script>
 </html>
