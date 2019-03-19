@@ -14,19 +14,25 @@
         .arrow {
             width: 40px;
             height: 40px;
-            position: absolute;
         }
 
-        .right {
-            transform: translateX(-50%);
-            right: 33%;
-            top: 50%;
+        .shirtArrows,
+        .pantsArrows {
+            position: absolute;
+            top: 38%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pantsArrows {
+            top: 58%;
         }
 
         .left {
-            transform: rotate(180deg ) translateX(-50%);
-            left: 33%;
-            top: 50%;
+            transform: rotate(180deg );
+            margin-left: -10px;
+            margin-right: 10px;
         }
 
         .content {
@@ -44,10 +50,6 @@
         #leftPants,
         #rightPants {
             top: 61%;
-        }
-
-        #presentation {
-            width:50%;
         }
 
         .presentation:not(.active) {
@@ -75,11 +77,14 @@
             <img class='presentation' id="31" src='./images/3-1.gif'/>
             <img class='presentation' id="32" src='./images/3-2.gif'/>
         </div>
-        <img class="arrow left" id="leftShirt" src="./images/arrow.svg"/>
-        <img class="arrow left" id="leftPants" src="./images/arrow.svg"/>
-        <img class="arrow right" id="rightShirt" src="./images/arrow.svg"/>
-        <img class="arrow right" id="rightPants" src="./images/arrow.svg"/>
-
+        <div class="shirtArrows">
+            <img class="arrow left" id="leftShirt" src="./images/arrow.svg"/>
+            <img class="arrow right" id="rightShirt" src="./images/arrow.svg"/>
+        </div>
+        <div class="pantsArrows">
+            <img class="arrow left" id="leftPants" src="./images/arrow.svg"/>
+            <img class="arrow right" id="rightPants" src="./images/arrow.svg"/>
+        </div>
     </div>
 </div>
 </body>
@@ -143,9 +148,7 @@
 
                 document.getElementById(shirts+ "" + pants).classList.add("active");
             }
-
         }
-
     }
 </script>
 </html>
