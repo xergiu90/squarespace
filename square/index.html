@@ -12,27 +12,26 @@
         }
 
         .arrow {
-            width: 40px;
-            height: 40px;
+            width: 70px;
+            height: 70px;
         }
 
         .shirtArrows,
         .pantsArrows {
             position: absolute;
-            top: 38%;
+            top: 30%;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         .pantsArrows {
-            top: 58%;
+            top: 63%;
         }
 
         .left {
             transform: rotate(180deg );
-            margin-left: -10px;
-            margin-right: 10px;
+            margin-right: 50px;
         }
 
         .content {
@@ -42,14 +41,9 @@
             position: relative;
         }
 
-        #rightShirt,
-        #leftShirt {
-            top: 39%;
-        }
-
-        #leftPants,
-        #rightPants {
-            top: 61%;
+        .presentation {
+            width: 100%;
+            height: auto;
         }
 
         .presentation:not(.active) {
@@ -70,10 +64,8 @@
         <div class="content" id="content">
             <img class='presentation active' id="11" src='./images/1-1.gif'/>
             <img class='presentation' id="12" src='./images/1-2.gif'/>
-            <img class='presentation' id="13" src='./images/1-3.gif'/>
             <img class='presentation' id="21" src='./images/2-1.gif'/>
             <img class='presentation' id="22" src='./images/2-2.gif'/>
-            <img class='presentation' id="23" src='./images/2-3.gif'/>
             <img class='presentation' id="31" src='./images/3-1.gif'/>
             <img class='presentation' id="32" src='./images/3-2.gif'/>
         </div>
@@ -86,10 +78,22 @@
             <img class="arrow right" id="rightPants" src="./images/arrow.svg"/>
         </div>
     </div>
+
+    <div class="right-images">
+        <div class="shirts">
+            <img class='presentation active' id="1-1" src='./images/1-1.jpg'/>
+            <img class='presentation' id="2-1" src='./images/2-1.jpg'/>
+            <img class='presentation' id="3-1" src='./images/3-1.jpg'/>
+        </div>
+        <div class="pants">
+            <img class='presentation active' id="1-2" src='./images/1-2.jpg'/>
+            <img class='presentation' id="2-2" src='./images/2-2.jpg'/>
+        </div>
+    </div>
 </div>
 </body>
 <script>
-    let position= [[1,2,3],[1,2,3],[1,2]];
+    let position= [3,2];
     let shirts= 1;
     let pants= 1;
     let arrowClick= document.querySelectorAll(".arrow");
@@ -102,51 +106,62 @@
 
     function clickArrow(arrow) {
         let active= document.getElementsByClassName("active")[0];
+        let activeshirts= document.getElementsByClassName("active")[1];
+        let activepants= document.getElementsByClassName("active")[2];
+
         if(arrow.classList.contains("right")) {
 
             if(arrow.id==="rightShirt") {
                 active.classList.remove('active');
+                activeshirts.classList.remove('active');
 
-                if(shirts >= position[pants-1].length) {
+                if(shirts >= position[0]) {
                     shirts= 1;
                 } else {
                     shirts++;
                 }
 
                 document.getElementById(shirts+ "" + pants).classList.add("active");
+                document.getElementById(shirts+ "-1").classList.add("active");
             } else {
                 active.classList.remove('active');
+                activepants.classList.remove('active');
 
-                if(pants >= position[shirts-1].length) {
+                if(pants >= position[1]) {
                     pants= 1;
                 } else {
                     pants++;
                 }
 
                 document.getElementById(shirts+ "" + pants).classList.add("active");
+                document.getElementById(pants+ "-2").classList.add("active");
             }
         } else if(arrow.classList.contains("left")) {
 
             if(arrow.id=="leftShirt") {
                 active.classList.remove('active');
+                activeshirts.classList.remove('active');
 
                 if(shirts === 1) {
-                    shirts= position[pants-1].length;
+                    shirts= position[0];
                 } else {
                     shirts--;
                 }
 
                 document.getElementById(shirts+ "" + pants).classList.add("active");
+                document.getElementById(shirts+ "-1").classList.add("active");
             } else {
                 active.classList.remove('active');
+                activepants.classList.remove('active');
 
                 if(pants === 1) {
-                    pants= position[shirts-1].length;
+                    pants= position[1];
                 } else {
                     pants--;
                 }
 
                 document.getElementById(shirts+ "" + pants).classList.add("active");
+                document.getElementById(pants+ "-2").classList.add("active");
             }
         }
     }

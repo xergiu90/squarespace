@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="949f3e41-0e99-4fa2-929d-bf3bdc849907" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/1-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/1-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/1-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/1-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/1-3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/2-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/2-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/2-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/2-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/2-3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/3-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/3-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square/images/3-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/3-2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/square/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/square/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -14,6 +22,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1063641657">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="212" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="212" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -24,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/square/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="-238">
+              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -49,6 +77,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="885" />
     <option name="y" value="53" />
@@ -60,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,23 +104,13 @@
             <path>
               <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
               <item name="squarespace" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="squarespace" type="462c0819:PsiDirectoryNode" />
               <item name="square" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="squarespace" type="462c0819:PsiDirectoryNode" />
-              <item name="square" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,11 +151,12 @@
       <workItem from="1552463844481" duration="13992000" />
       <workItem from="1552493960772" duration="6189000" />
       <workItem from="1552647609896" duration="3699000" />
+      <workItem from="1557051589042" duration="2435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29640000" />
+    <option name="totallyTimeSpent" value="32081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -160,6 +184,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blocks/sqs-video-background.block">
       <provider selected="true" editor-type-id="text-editor">
@@ -176,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/square/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="-238">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
         </state>
       </provider>
     </entry>
