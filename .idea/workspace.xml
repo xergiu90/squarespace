@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="949f3e41-0e99-4fa2-929d-bf3bdc849907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/square/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/square/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="949f3e41-0e99-4fa2-929d-bf3bdc849907" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -43,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/square/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1615">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="57" />
+            <state relative-caret-position="408">
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="90" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -55,7 +53,11 @@
     <findStrings>
       <find>position</find>
       <find>toggleClothes</find>
+      <find>1-1</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\xergi\Projects\squarespace</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,6 +93,17 @@
             <path>
               <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
               <item name="squarespace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="squarespace" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="squarespace" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="newimages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
@@ -148,16 +161,15 @@
       <workItem from="1552463844481" duration="13992000" />
       <workItem from="1552493960772" duration="6189000" />
       <workItem from="1552647609896" duration="3699000" />
-      <workItem from="1557051589042" duration="2950000" />
+      <workItem from="1557051589042" duration="3726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32596000" />
+    <option name="totallyTimeSpent" value="33372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -200,8 +212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/square/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="57" />
+        <state relative-caret-position="408">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="90" selection-end-column="14" />
         </state>
       </provider>
     </entry>
