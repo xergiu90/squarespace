@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="949f3e41-0e99-4fa2-929d-bf3bdc849907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/1-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/1-1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/1-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/1-2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/1-3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/2-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/2-1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/2-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/2-2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/2-3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/3-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/3-1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square/images/3-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/square/images/3-2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/square/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/square/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,12 +23,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="212" />
+          <entry key="html" value="213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="212" />
+          <entry key="HTML" value="213" />
         </counts>
       </usages-collector>
     </session>
@@ -52,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/square/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="770">
+              <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -106,6 +97,12 @@
               <item name="squarespace" type="462c0819:PsiDirectoryNode" />
               <item name="square" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="squarespace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="squarespace" type="462c0819:PsiDirectoryNode" />
+              <item name="square" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -151,12 +148,12 @@
       <workItem from="1552463844481" duration="13992000" />
       <workItem from="1552493960772" duration="6189000" />
       <workItem from="1552647609896" duration="3699000" />
-      <workItem from="1557051589042" duration="2435000" />
+      <workItem from="1557051589042" duration="2677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32081000" />
+    <option name="totallyTimeSpent" value="32323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -203,8 +200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/square/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="770">
+          <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
         </state>
       </provider>
     </entry>
