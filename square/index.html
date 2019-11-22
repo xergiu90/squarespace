@@ -91,12 +91,27 @@
         </div>
     </div>
 </div>
+
+<div class="sqs-add-to-cart-button-wrapper" style="visibility: visible;">
+    <div class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button " role="button" tabindex="0" data-collection-id="5c7d9cfc4785d394ced88fd5" data-item-id="0" data-product-type="1" data-use-custom-label="false" data-original-label="Add To Cart" id="yui_3_17_2_1_1574412196895_1662">
+        <div class="sqs-add-to-cart-button-inner">Purchase</div>
+    </div>
+</div>
 </body>
 <script>
     let position= [3,2];
     let shirts= 1;
     let pants= 1;
     let arrowClick= document.querySelectorAll(".arrow");
+    let purchaseButton= document.getElementsByClassName("sqs-add-to-cart-button");
+    let itemId= {
+        '1-1': '5d9cd89c0d27350f78163dfc',
+        '2-1': '5d9cdbad0d27350f781697aa',
+        '3-1': '5d9cddeb728287066bf7523c',
+        '1-2': '5d9cd98d8f939f2e7f6b4cdf',
+        '2-2': '5d9cdc493c1562430ba08fa9',
+        '3-2': '5d9cdd624dc5ea4a13d9155a'
+    };
 
     arrowClick.forEach(function(element) {
         element.addEventListener("click", function() {
@@ -164,6 +179,8 @@
                 document.getElementById(pants+ "-2").classList.add("active");
             }
         }
+        let shirtsPants= shirts + "-" + pants;
+        purchaseButton[0].setAttribute('data-item-id', itemId[shirtsPants]);
     }
 </script>
 </html>
